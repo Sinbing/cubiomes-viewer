@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>FormGen48</class>
+ <widget class="QWidget" name="FormGen48">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>435</width>
+    <height>182</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <property name="margin">
+    <number>0</number>
+   </property>
+   <item row="0" column="0">
+    <widget class="QWidget" name="widget" native="true">
+     <layout class="QGridLayout" name="gridLayout_2">
+      <property name="margin">
+       <number>0</number>
+      </property>
+      <item row="0" column="0" colspan="2">
+       <widget class="QTabWidget" name="tabWidget">
+        <property name="currentIndex">
+         <number>0</number>
+        </property>
+        <widget class="QWidget" name="tabAuto">
+         <attribute name="title">
+          <string>自动/空</string>
+         </attribute>
+         <layout class="QGridLayout" name="gridLayout_4">
+          <property name="margin">
+           <number>4</number>
+          </property>
+          <item row="0" column="0">
+           <widget class="QLabel" name="labelAutoDesc">
+            <property name="text">
+             <string>根据筛选条件自动设置结构选项。</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="labelAuto">
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="tabQuadF">
+         <attribute name="title">
+          <string>四连结构特征</string>
+         </attribute>
+         <layout class="QGridLayout" name="gridLayout_5">
+          <property name="margin">
+           <number>4</number>
+          </property>
+          <item row="1" column="0">
+           <widget class="QLabel" name="labelSalt">
+            <property name="toolTip">
+             <string>将值 (如一个盐值) 添加进 48-bit 种子列表。</string>
+            </property>
+            <property name="text">
+             <string>加盐值:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QLineEdit" name="lineSalt">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="text">
+             <string>0</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QLabel" name="labelLow20">
+            <property name="toolTip">
+             <string>为种子的低 20 位选择一组值，对应于与四连结构特征
+只适用于区域大小=32和块状间隙=8的特征结构，特别是沼泽小屋。</string>
+            </property>
+            <property name="text">
+             <string>限制低位:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QComboBox" name="comboLow20">
+            <property name="sizeAdjustPolicy">
+             <enum>QComboBox::AdjustToMinimumContentsLength</enum>
+            </property>
+            <item>
+             <property name="text">
+              <string>四连女巫小屋 (理想型)</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>四连女巫小屋 (经典型)</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>四连女巫小屋 (普通型)</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>四连女巫小屋 (仅满足)</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>四连结构特征 (ideal, custom salt)</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="tabQuadM">
+         <attribute name="title">
+          <string>四连海底神殿</string>
+         </attribute>
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <item>
+           <widget class="QLabel" name="labelQM">
+            <property name="toolTip">
+             <string>在中心位置128个方块内的海底神殿的平面生成空间的数量
+(即这是一个在4*58*58中的测量质量)</string>
+            </property>
+            <property name="text">
+             <string>最小海底神殿区域:</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="tabList">
+         <attribute name="title">
+          <string>种子列表</string>
+         </attribute>
+         <layout class="QGridLayout" name="gridLayout_7">
+          <property name="margin">
+           <number>4</number>
+          </property>
+          <item row="0" column="0">
+           <widget class="QLabel" name="labelPath">
+            <property name="toolTip">
+             <string>使用自定义种子列表作为48位种子的候选源。</string>
+            </property>
+            <property name="text">
+             <string>加载48位种子列表:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLineEdit" name="lineList48">
+            <property name="font">
+             <font>
+              <family>Monospace</family>
+              <pointsize>9</pointsize>
+             </font>
+            </property>
+            <property name="readOnly">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="2">
+           <widget class="QPushButton" name="buttonBrowse">
+            <property name="maximumSize">
+             <size>
+              <width>24</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>...</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="labelListSalt">
+            <property name="toolTip">
+             <string>将值 (如一个盐值) 添加进 48-bit 种子列表。</string>
+            </property>
+            <property name="text">
+             <string>加盐值:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1" colspan="2">
+           <widget class="QLineEdit" name="lineListSalt">
+            <property name="enabled">
+             <bool>true</bool>
+            </property>
+            <property name="text">
+             <string>0</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+      </item>
+      <item row="1" column="0" colspan="2">
+       <widget class="QFrame" name="frame">
+        <property name="frameShape">
+         <enum>QFrame::NoFrame</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Plain</enum>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_3">
+         <property name="margin">
+          <number>0</number>
+         </property>
+         <item row="0" column="0">
+          <widget class="QLabel" name="labelTranspose">
+           <property name="text">
+            <string>转置区域 (坐标x512倍):</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <spacer name="horizontalSpacer_2">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeType">
+            <enum>QSizePolicy::MinimumExpanding</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>0</width>
+             <height>0</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item row="0" column="2">
+          <widget class="QRadioButton" name="radioAuto">
+           <property name="text">
+            <string>自动</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="3">
+          <widget class="QRadioButton" name="radioManual">
+           <property name="text">
+            <string>手动</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item row="2" column="0" colspan="2">
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QLabel" name="labelX1">
+          <property name="toolTip">
+           <string>下限（含）</string>
+          </property>
+          <property name="text">
+           <string>X&lt;sub&gt;1&lt;/sub&gt;=</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="lineEditX1">
+          <property name="toolTip">
+           <string>下限（含）</string>
+          </property>
+          <property name="text">
+           <string>0</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="labelZ1">
+          <property name="toolTip">
+           <string>下限（含）</string>
+          </property>
+          <property name="text">
+           <string>Z&lt;sub&gt;1&lt;/sub&gt;=</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="lineEditZ1">
+          <property name="toolTip">
+           <string>下限（含）</string>
+          </property>
+          <property name="text">
+           <string>0</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QLabel" name="labelX2">
+          <property name="toolTip">
+           <string>上限（含）</string>
+          </property>
+          <property name="text">
+           <string>X&lt;sub&gt;2&lt;/sub&gt;=</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="lineEditX2">
+          <property name="toolTip">
+           <string>上限（含）</string>
+          </property>
+          <property name="text">
+           <string>0</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="labelZ2">
+          <property name="toolTip">
+           <string>上限（含）</string>
+          </property>
+          <property name="text">
+           <string>Z&lt;sub&gt;2&lt;/sub&gt;=</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="lineEditZ2">
+          <property name="toolTip">
+           <string>上限（含）</string>
+          </property>
+          <property name="text">
+           <string>0</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item row="3" column="0">
+       <widget class="QLabel" name="labelSpace">
+        <property name="text">
+         <string>搜索区域内的种子:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <widget class="QLabel" name="labelCount">
+        <property name="text">
+         <string>0</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="0">
+       <spacer name="verticalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::MinimumExpanding</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>0</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

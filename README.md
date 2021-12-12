@@ -1,3 +1,13 @@
+# 汉化说明：
+
+通过直接修改硬编码的qt file的方式，实现了对软件的99%汉化
+
+有一行我实在是不知道要怎么翻译，试了半天也没发现是什么作用的设置，不管他了。
+
+以下为原README
+
+
+
 # Cubiomes Viewer
 
 Cubiomes Viewer provides a graphical interface for the efficient and flexible seed-finding utilities provided by [cubiomes](https://github.com/Cubitect/cubiomes) and a map viewer for the Minecraft biomes and structure generation.
