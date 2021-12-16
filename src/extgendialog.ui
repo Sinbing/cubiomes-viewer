@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>World Settings (experimental)</string>
+   <string>世界设置 (实验性功能)</string>
   </property>
   <property name="windowIcon">
    <iconset resource="../icons.qrc">
@@ -21,7 +21,7 @@
    <item row="1" column="0" colspan="2">
     <widget class="QGroupBox" name="groupSalts">
      <property name="title">
-      <string>Override structure salt</string>
+      <string>覆写盐值 (Override structure salt)</string>
      </property>
      <property name="checkable">
       <bool>true</bool>

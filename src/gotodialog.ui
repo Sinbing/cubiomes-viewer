@@ -3,13 +3,13 @@
  <class>GotoDialog</class>
  <widget class="QDialog" name="GotoDialog">
   <property name="windowTitle">
-   <string>Coordinates</string>
+   <string>坐标</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
     <widget class="QLabel" name="label">
      <property name="text">
-      <string>Coordinates:</string>
+      <string>坐标:</string>
      </property>
     </widget>
    </item>
@@ -56,7 +56,7 @@
      <item>
       <widget class="QLabel" name="label_2">
        <property name="text">
-        <string>Scale:</string>
+        <string>分辨率:</string>
        </property>
       </widget>
      </item>
@@ -66,7 +66,7 @@
      <item>
       <widget class="QLabel" name="label_3">
        <property name="text">
-        <string>blocks per pixel</string>
+        <string>方块每像素</string>
        </property>
       </widget>
      </item>

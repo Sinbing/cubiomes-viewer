@@ -36,7 +36,7 @@
         </property>
         <widget class="QWidget" name="tabAuto">
          <attribute name="title">
-          <string>Auto/None</string>
+          <string>自动/空</string>
          </attribute>
          <layout class="QGridLayout" name="gridLayout_4">
           <property name="margin">
@@ -45,7 +45,7 @@
           <item row="0" column="0">
            <widget class="QLabel" name="labelAutoDesc">
             <property name="text">
-             <string>Automatically select suitable options based on conditions.</string>
+             <string>根据筛选条件自动设置结构选项。</string>
             </property>
            </widget>
           </item>
@@ -60,7 +60,7 @@
         </widget>
         <widget class="QWidget" name="tabQuadF">
          <attribute name="title">
-          <string>Quad-feature</string>
+          <string>四连结构特征</string>
          </attribute>
          <layout class="QGridLayout" name="gridLayout_5">
           <property name="margin">
@@ -69,10 +69,10 @@
           <item row="1" column="0">
            <widget class="QLabel" name="labelSalt">
             <property name="toolTip">
-             <string>Value (such as a structure salt) added to the 48-bit seeds</string>
+             <string>将值 (如一个盐值) 添加进 48-bit 种子列表。</string>
             </property>
             <property name="text">
-             <string>Add structure salt:</string>
+             <string>加盐值:</string>
             </property>
            </widget>
           </item>
@@ -89,11 +89,11 @@
           <item row="0" column="0">
            <widget class="QLabel" name="labelLow20">
             <property name="toolTip">
-             <string>Selects a set of values for the lower 20-bits of the seed, corresponding to quad-feature constellations
-Applies only to feature-structures of region-size = 32 and chunk-gap = 8, in particular swamp-huts</string>
+             <string>为种子的低 20 位选择一组值，对应于与四连结构特征
+只适用于区域大小=32和块状间隙=8的特征结构，特别是沼泽小屋。</string>
             </property>
             <property name="text">
-             <string>Restrict lower bits:</string>
+             <string>限制低位:</string>
             </property>
            </widget>
           </item>
@@ -104,27 +104,27 @@ Applies only to feature-structures of region-size = 32 and chunk-gap = 8, in par
             </property>
             <item>
              <property name="text">
-              <string>Quad-hut (ideal)</string>
+              <string>四连女巫小屋 (理想型)</string>
              </property>
             </item>
             <item>
              <property name="text">
-              <string>Quad-hut (classic)</string>
+              <string>四连女巫小屋 (经典型)</string>
              </property>
             </item>
             <item>
              <property name="text">
-              <string>Quad-hut (normal)</string>
+              <string>四连女巫小屋 (普通型)</string>
              </property>
             </item>
             <item>
              <property name="text">
-              <string>Quad-hut (barely)</string>
+              <string>四连女巫小屋 (仅满足)</string>
              </property>
             </item>
             <item>
              <property name="text">
-              <string>Quad-feature (ideal, custom salt)</string>
+              <string>四连结构特征 (ideal, custom salt)</string>
              </property>
             </item>
            </widget>
@@ -133,17 +133,17 @@ Applies only to feature-structures of region-size = 32 and chunk-gap = 8, in par
         </widget>
         <widget class="QWidget" name="tabQuadM">
          <attribute name="title">
-          <string>Quad-monument</string>
+          <string>四连海底神殿</string>
          </attribute>
          <layout class="QHBoxLayout" name="horizontalLayout_2">
           <item>
            <widget class="QLabel" name="labelQM">
             <property name="toolTip">
-             <string>Number of planar spawning spaces inside monuments that are within 128 blocks of a center position
-(i.e. this is a measure quality, out of 4*58*58)</string>
+             <string>在中心位置128个方块内的海底神殿的平面生成空间的数量
+(即这是一个在4*58*58中的测量质量)</string>
             </property>
             <property name="text">
-             <string>Min. monument area:</string>
+             <string>最小海底神殿区域:</string>
             </property>
            </widget>
           </item>
@@ -151,7 +151,7 @@ Applies only to feature-structures of region-size = 32 and chunk-gap = 8, in par
         </widget>
         <widget class="QWidget" name="tabList">
          <attribute name="title">
-          <string>Seed list</string>
+          <string>种子列表</string>
          </attribute>
          <layout class="QGridLayout" name="gridLayout_7">
           <property name="margin">
@@ -160,10 +160,10 @@ Applies only to feature-structures of region-size = 32 and chunk-gap = 8, in par
           <item row="0" column="0">
            <widget class="QLabel" name="labelPath">
             <property name="toolTip">
-             <string>Use a custom seed list as source for 48-bit seed candidates</string>
+             <string>使用自定义种子列表作为48位种子的候选源。</string>
             </property>
             <property name="text">
-             <string>Load 48-bit seed list:</string>
+             <string>加载48位种子列表:</string>
             </property>
            </widget>
           </item>
@@ -196,10 +196,10 @@ Applies only to feature-structures of region-size = 32 and chunk-gap = 8, in par
           <item row="1" column="0">
            <widget class="QLabel" name="labelListSalt">
             <property name="toolTip">
-             <string>Value (such as a structure salt) added to the 48-bit seeds</string>
+             <string>将值 (如一个盐值) 添加进 48-bit 种子列表。</string>
             </property>
             <property name="text">
-             <string>Add structure salt:</string>
+             <string>加盐值:</string>
             </property>
            </widget>
           </item>
@@ -232,7 +232,7 @@ Applies only to feature-structures of region-size = 32 and chunk-gap = 8, in par
          <item row="0" column="0">
           <widget class="QLabel" name="labelTranspose">
            <property name="text">
-            <string>Transpose by regions (multiplied by x512):</string>
+            <string>转置区域 (坐标x512倍):</string>
            </property>
           </widget>
          </item>
@@ -255,14 +255,14 @@ Applies only to feature-structures of region-size = 32 and chunk-gap = 8, in par
          <item row="0" column="2">
           <widget class="QRadioButton" name="radioAuto">
            <property name="text">
-            <string>Auto</string>
+            <string>自动</string>
            </property>
           </widget>
          </item>
          <item row="0" column="3">
           <widget class="QRadioButton" name="radioManual">
            <property name="text">
-            <string>Manual</string>
+            <string>手动</string>
            </property>
           </widget>
          </item>
@@ -274,7 +274,7 @@ Applies only to feature-structures of region-size = 32 and chunk-gap = 8, in par
         <item>
          <widget class="QLabel" name="labelX1">
           <property name="toolTip">
-           <string>Lower bound (inclusive)</string>
+           <string>下限（含）</string>
           </property>
           <property name="text">
            <string>X&lt;sub&gt;1&lt;/sub&gt;=</string>
@@ -284,7 +284,7 @@ Applies only to feature-structures of region-size = 32 and chunk-gap = 8, in par
         <item>
          <widget class="QLineEdit" name="lineEditX1">
           <property name="toolTip">
-           <string>Lower bound (inclusive)</string>
+           <string>下限（含）</string>
           </property>
           <property name="text">
            <string>0</string>
@@ -294,7 +294,7 @@ Applies only to feature-structures of region-size = 32 and chunk-gap = 8, in par
         <item>
          <widget class="QLabel" name="labelZ1">
           <property name="toolTip">
-           <string>Lower bound (inclusive)</string>
+           <string>下限（含）</string>
           </property>
           <property name="text">
            <string>Z&lt;sub&gt;1&lt;/sub&gt;=</string>
@@ -304,7 +304,7 @@ Applies only to feature-structures of region-size = 32 and chunk-gap = 8, in par
         <item>
          <widget class="QLineEdit" name="lineEditZ1">
           <property name="toolTip">
-           <string>Lower bound (inclusive)</string>
+           <string>下限（含）</string>
           </property>
           <property name="text">
            <string>0</string>
@@ -327,7 +327,7 @@ Applies only to feature-structures of region-size = 32 and chunk-gap = 8, in par
         <item>
          <widget class="QLabel" name="labelX2">
           <property name="toolTip">
-           <string>Upper bound (inclusive)</string>
+           <string>上限（含）</string>
           </property>
           <property name="text">
            <string>X&lt;sub&gt;2&lt;/sub&gt;=</string>
@@ -337,7 +337,7 @@ Applies only to feature-structures of region-size = 32 and chunk-gap = 8, in par
         <item>
          <widget class="QLineEdit" name="lineEditX2">
           <property name="toolTip">
-           <string>Upper bound (inclusive)</string>
+           <string>上限（含）</string>
           </property>
           <property name="text">
            <string>0</string>
@@ -347,7 +347,7 @@ Applies only to feature-structures of region-size = 32 and chunk-gap = 8, in par
         <item>
          <widget class="QLabel" name="labelZ2">
           <property name="toolTip">
-           <string>Upper bound (inclusive)</string>
+           <string>上限（含）</string>
           </property>
           <property name="text">
            <string>Z&lt;sub&gt;2&lt;/sub&gt;=</string>
@@ -357,7 +357,7 @@ Applies only to feature-structures of region-size = 32 and chunk-gap = 8, in par
         <item>
          <widget class="QLineEdit" name="lineEditZ2">
           <property name="toolTip">
-           <string>Upper bound (inclusive)</string>
+           <string>上限（含）</string>
           </property>
           <property name="text">
            <string>0</string>
@@ -369,7 +369,7 @@ Applies only to feature-structures of region-size = 32 and chunk-gap = 8, in par
       <item row="3" column="0">
        <widget class="QLabel" name="labelSpace">
         <property name="text">
-         <string>Seeds in search space:</string>
+         <string>搜索区域内的种子:</string>
         </property>
        </widget>
       </item>

@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>About</string>
+   <string>关于</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
    <item row="1" column="1">
@@ -48,6 +48,7 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Built:	_DATE_&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;URL:	&lt;a href=&quot;https://github.com/Cubitect/cubiomes-viewer&quot;&gt;&lt;span style=&quot; font-family:'Sans Serif'; text-decoration: underline; color:#0057ae;&quot;&gt;https://github.com/Cubitect/cubiomes-viewer&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;汉化版 URL:	&lt;a href=&quot;https://github.com/Sinbing/cubiomes-viewer&quot;&gt;&lt;span style=&quot; font-family:'Sans Serif'; text-decoration: underline; color:#0057ae;&quot;&gt;https://github.com/Sinbing/cubiomes-viewer&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;License:	&lt;a href=&quot;https://www.gnu.org/licenses/gpl-3.0.en.html&quot;&gt;&lt;span style=&quot; font-family:'Sans Serif'; text-decoration: underline; color:#0057ae;&quot;&gt;GPLv3&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Components and Legal Information&lt;/span&gt;&lt;/p&gt;

@@ -83,7 +83,7 @@
      </attribute>
      <column>
       <property name="text">
-       <string>Hex  (Low-48 | Top-16)</string>
+       <string>十六进制（Low-48|Top-16）</string>
       </property>
       <property name="textAlignment">
        <set>AlignLeading|AlignVCenter</set>
@@ -91,7 +91,7 @@
      </column>
      <column>
       <property name="text">
-       <string>Seed</string>
+       <string>种子</string>
       </property>
       <property name="textAlignment">
        <set>AlignLeading|AlignVCenter</set>
@@ -133,17 +133,17 @@
      <item row="0" column="5">
       <widget class="QLabel" name="label_3">
        <property name="text">
-        <string>Threads:</string>
+        <string>线程数:</string>
        </property>
       </widget>
      </item>
      <item row="1" column="4" colspan="3">
       <widget class="QCheckBox" name="checkStop">
        <property name="toolTip">
-        <string>stop as soon as the next set of matching seeds is found</string>
+        <string>在搜索到下一个匹配条件的种子时停止。</string>
        </property>
        <property name="text">
-        <string>Stop on results</string>
+        <string>有结果时停止</string>
        </property>
        <property name="checked">
         <bool>true</bool>
@@ -156,7 +156,7 @@
         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;searching algorithm&lt;/p&gt;&lt;p&gt;incremental: best for non-exhaustive biome searches&lt;/p&gt;&lt;p&gt;48-bit family blocks: best for searches with strong structure restrictions&lt;/p&gt;&lt;p&gt;seed list from file...: load and search through a pre-computed list of seed&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
        <property name="text">
-        <string>Search:</string>
+        <string>搜索方式:</string>
        </property>
       </widget>
      </item>
@@ -189,7 +189,7 @@
      <item row="1" column="0">
       <widget class="QLabel" name="label_2">
        <property name="text">
-        <string>Seed:</string>
+        <string>种子:</string>
        </property>
       </widget>
      </item>
@@ -213,17 +213,17 @@
        </property>
        <item>
         <property name="text">
-         <string>incremental</string>
+         <string>递增</string>
         </property>
        </item>
        <item>
         <property name="text">
-         <string>48-bit family blocks</string>
+         <string>48-Bit 族块</string>
         </property>
        </item>
        <item>
         <property name="text">
-         <string>seed list from a file...</string>
+         <string>从文件中读取种子列表...</string>
         </property>
        </item>
       </widget>
@@ -236,7 +236,7 @@
         </font>
        </property>
        <property name="toolTip">
-        <string>Queued progress within search set</string>
+        <string>搜索进度</string>
        </property>
        <property name="layoutDirection">
         <enum>Qt::LeftToRight</enum>
@@ -257,7 +257,7 @@
        <item>
         <widget class="QPushButton" name="buttonClear">
          <property name="text">
-          <string>Clear results</string>
+          <string>清空结果</string>
          </property>
          <property name="icon">
           <iconset resource="../icons.qrc">
@@ -268,7 +268,7 @@
        <item>
         <widget class="QPushButton" name="buttonStart">
          <property name="text">
-          <string>Start search</string>
+          <string>开始搜索</string>
          </property>
          <property name="icon">
           <iconset resource="../icons.qrc">

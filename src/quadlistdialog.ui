@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Quad-Structure Scan</string>
+   <string>搜索四连结构</string>
   </property>
   <property name="windowIcon">
    <iconset resource="../icons.qrc">
@@ -21,7 +21,7 @@
    <item row="1" column="0">
     <widget class="QGroupBox" name="groupBox_3">
      <property name="title">
-      <string>Quad-Structures</string>
+      <string>四连结构</string>
      </property>
      <layout class="QGridLayout" name="gridLayout_8">
       <item row="0" column="0">
@@ -57,10 +57,10 @@
         </attribute>
         <column>
          <property name="text">
-          <string>Structure</string>
+          <string>结构名称</string>
          </property>
          <property name="toolTip">
-          <string>type of quad-structure</string>
+          <string>四连结构种类</string>
          </property>
          <property name="textAlignment">
           <set>AlignLeft|AlignVCenter</set>
@@ -68,10 +68,10 @@
         </column>
         <column>
          <property name="text">
-          <string>Distance</string>
+          <string>距离</string>
          </property>
          <property name="toolTip">
-          <string>distance to origin</string>
+          <string>到世界原点的距离</string>
          </property>
          <property name="textAlignment">
           <set>AlignLeft|AlignVCenter</set>
@@ -79,10 +79,10 @@
         </column>
         <column>
          <property name="text">
-          <string>Optimal centre</string>
+          <string>最优中心</string>
          </property>
          <property name="toolTip">
-          <string>optimal AFK location</string>
+          <string>最优挂机坐标</string>
          </property>
          <property name="textAlignment">
           <set>AlignLeft|AlignVCenter</set>
@@ -90,10 +90,10 @@
         </column>
         <column>
          <property name="text">
-          <string>Enclosing range</string>
+          <string>结构外接圆半径</string>
          </property>
          <property name="toolTip">
-          <string>distance to furthest spawning space from optimal AFK position</string>
+          <string>[最优挂机坐标] 与 [最远刷怪位置] 之间的距离</string>
          </property>
          <property name="textAlignment">
           <set>AlignLeft|AlignVCenter</set>
@@ -101,10 +101,10 @@
         </column>
         <column>
          <property name="text">
-          <string>Spawn area</string>
+          <string>刷怪范围</string>
          </property>
          <property name="toolTip">
-          <string>horizontal bounding box area inside a 128 block range</string>
+          <string>128格范围内的有效刷怪面积</string>
          </property>
          <property name="textAlignment">
           <set>AlignLeft|AlignVCenter</set>
@@ -127,41 +127,41 @@
      <item row="0" column="2">
       <widget class="QLabel" name="labelSeed">
        <property name="toolTip">
-        <string>Seed can be an integer or text. Leave empty for a random seed.</string>
+        <string>种子可以输入数字或文字，留空为随机种子。</string>
        </property>
        <property name="text">
-        <string>seed:</string>
+        <string>种子:</string>
        </property>
       </widget>
      </item>
      <item row="0" column="3">
       <widget class="QLineEdit" name="lineSeed">
        <property name="toolTip">
-        <string>press enter to accept</string>
+        <string>按下回车以开始搜索</string>
        </property>
       </widget>
      </item>
      <item row="0" column="0">
       <widget class="QLabel" name="labeMC">
        <property name="toolTip">
-        <string>Minecraft version</string>
+        <string>Minecraft 游戏版本</string>
        </property>
        <property name="text">
-        <string>MC</string>
+        <string>版本</string>
        </property>
       </widget>
      </item>
      <item row="0" column="4">
       <widget class="QPushButton" name="buttonGo">
        <property name="text">
-        <string>Go</string>
+        <string>搜索</string>
        </property>
       </widget>
      </item>
      <item row="0" column="1">
       <widget class="QComboBox" name="comboBoxMC">
        <property name="toolTip">
-        <string>Minecraft version</string>
+        <string>Minecraft 游戏版本</string>
        </property>
        <property name="sizeAdjustPolicy">
         <enum>QComboBox::AdjustToMinimumContentsLength</enum>
@@ -277,7 +277,7 @@
    <item row="3" column="0" alignment="Qt::AlignRight">
     <widget class="QPushButton" name="buttonClose">
      <property name="text">
-      <string>Close</string>
+      <string>关闭</string>
      </property>
      <property name="icon">
       <iconset theme="window-close">

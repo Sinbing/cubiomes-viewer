@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Cubiomes Viewer</string>
+   <string>Cubiomes Viewer 汉化by: 新兵Sinbing</string>
   </property>
   <property name="windowIcon">
    <iconset resource="../icons.qrc">
@@ -43,21 +43,21 @@
           <item row="0" column="3">
            <widget class="QLineEdit" name="seedEdit">
             <property name="toolTip">
-             <string>Press enter to accept</string>
+             <string>按下回车以开始搜索</string>
             </property>
            </widget>
           </item>
           <item row="1" column="3">
            <widget class="QLineEdit" name="lineY">
             <property name="toolTip">
-             <string>Show map for this y-level</string>
+             <string>显示当前Y轴的地图</string>
             </property>
            </widget>
           </item>
           <item row="1" column="2">
            <widget class="QLabel" name="labelY">
             <property name="toolTip">
-             <string>Show map for this y-level</string>
+             <string>显示当前Y轴的地图</string>
             </property>
             <property name="text">
              <string>Y:</string>
@@ -70,7 +70,7 @@
           <item row="0" column="2">
            <widget class="QLabel" name="labelSeed">
             <property name="toolTip">
-             <string>Seed can be an integer or text. Leave empty for a random seed</string>
+             <string>种子可以输入数字或文字，留空为随机种子。</string>
             </property>
             <property name="text">
              <string>seed:</string>
@@ -83,7 +83,7 @@
           <item row="0" column="0">
            <widget class="QLabel" name="labeMC">
             <property name="toolTip">
-             <string>Minecraft version</string>
+             <string>Minecraft 游戏版本</string>
             </property>
             <property name="text">
              <string>MC</string>
@@ -99,17 +99,17 @@
              </size>
             </property>
             <property name="toolTip">
-             <string>Seed can be an integer or text. Leave empty for a random seed</string>
+             <string>种子可以输入数字或文字，留空为随机种子。</string>
             </property>
             <property name="text">
-             <string>(random)</string>
+             <string>(随机)</string>
             </property>
            </widget>
           </item>
           <item row="0" column="1">
            <widget class="QComboBox" name="comboBoxMC">
             <property name="toolTip">
-             <string>Minecraft version</string>
+             <string>Minecraft 游戏版本</string>
             </property>
             <property name="sizeAdjustPolicy">
              <enum>QComboBox::AdjustToMinimumContentsLength</enum>
@@ -223,7 +223,7 @@
           <item row="1" column="0" colspan="2">
            <widget class="QCheckBox" name="checkLarge">
             <property name="text">
-             <string>Large biomes</string>
+             <string>巨型生物群系</string>
             </property>
            </widget>
           </item>
@@ -242,7 +242,7 @@
             </sizepolicy>
            </property>
            <attribute name="title">
-            <string>Search</string>
+            <string>搜索</string>
            </attribute>
            <layout class="QGridLayout" name="gridLayout">
             <property name="leftMargin">
@@ -371,7 +371,7 @@ QSplitter {
           </widget>
           <widget class="QWidget" name="tabAnalysis">
            <attribute name="title">
-            <string>Analysis</string>
+            <string>分析</string>
            </attribute>
            <layout class="QGridLayout" name="gridLayout_7">
             <item row="0" column="1" colspan="2">
@@ -387,7 +387,7 @@ QSplitter {
                <bool>false</bool>
               </property>
               <property name="text">
-               <string>Export</string>
+               <string>导出</string>
               </property>
              </widget>
             </item>
@@ -424,12 +424,12 @@ QSplitter {
               </attribute>
               <column>
                <property name="text">
-                <string>object</string>
+                <string>类型</string>
                </property>
               </column>
               <column>
                <property name="text">
-                <string>count</string>
+                <string>数量</string>
                </property>
               </column>
              </widget>
@@ -439,7 +439,7 @@ QSplitter {
               <item>
                <widget class="QLabel" name="labelX1">
                 <property name="toolTip">
-                 <string>Lower bound (inclusive)</string>
+                 <string>下限（含）</string>
                 </property>
                 <property name="text">
                  <string>X&lt;sub&gt;1&lt;/sub&gt;=</string>
@@ -449,7 +449,7 @@ QSplitter {
               <item>
                <widget class="QLineEdit" name="lineEditX1">
                 <property name="toolTip">
-                 <string>Lower bound (inclusive)</string>
+                 <string>下限（含）</string>
                 </property>
                 <property name="text">
                  <string>0</string>
@@ -459,7 +459,7 @@ QSplitter {
               <item>
                <widget class="QLabel" name="labelZ1">
                 <property name="toolTip">
-                 <string>Lower bound (inclusive)</string>
+                 <string>下限（含）</string>
                 </property>
                 <property name="text">
                  <string>Z&lt;sub&gt;1&lt;/sub&gt;=</string>
@@ -469,7 +469,7 @@ QSplitter {
               <item>
                <widget class="QLineEdit" name="lineEditZ1">
                 <property name="toolTip">
-                 <string>Lower bound (inclusive)</string>
+                 <string>下限（含）</string>
                 </property>
                 <property name="text">
                  <string>0</string>
@@ -492,7 +492,7 @@ QSplitter {
               <item>
                <widget class="QLabel" name="labelX2">
                 <property name="toolTip">
-                 <string>Upper bound (inclusive)</string>
+                 <string>上限（含）</string>
                 </property>
                 <property name="text">
                  <string>X&lt;sub&gt;2&lt;/sub&gt;=</string>
@@ -502,7 +502,7 @@ QSplitter {
               <item>
                <widget class="QLineEdit" name="lineEditX2">
                 <property name="toolTip">
-                 <string>Upper bound (inclusive)</string>
+                 <string>上限（含）</string>
                 </property>
                 <property name="text">
                  <string>0</string>
@@ -512,7 +512,7 @@ QSplitter {
               <item>
                <widget class="QLabel" name="labelZ2">
                 <property name="toolTip">
-                 <string>Upper bound (inclusive)</string>
+                 <string>上限（含）</string>
                 </property>
                 <property name="text">
                  <string>Z&lt;sub&gt;2&lt;/sub&gt;=</string>
@@ -522,7 +522,7 @@ QSplitter {
               <item>
                <widget class="QLineEdit" name="lineEditZ2">
                 <property name="toolTip">
-                 <string>Upper bound (inclusive)</string>
+                 <string>上限（含）</string>
                 </property>
                 <property name="text">
                  <string>0</string>
@@ -534,24 +534,24 @@ QSplitter {
             <item row="2" column="3" colspan="2">
              <widget class="QPushButton" name="buttonFromVisible">
               <property name="text">
-               <string>From visible</string>
+               <string>从地图导入范围</string>
               </property>
              </widget>
             </item>
             <item row="0" column="0">
              <widget class="QLabel" name="labelSquareArea">
               <property name="text">
-               <string>Within centred square of side =</string>
+               <string>从中心点外延正方形区域的半径 =</string>
               </property>
              </widget>
             </item>
             <item row="0" column="3" colspan="2">
              <widget class="QCheckBox" name="checkArea">
               <property name="toolTip">
-               <string>Specify manual rectangle rather than square</string>
+               <string>手动设定矩形区域而不是预设的正方形</string>
               </property>
               <property name="text">
-               <string>Custom area</string>
+               <string>自定义范围</string>
               </property>
               <property name="checkable">
                <bool>true</bool>
@@ -563,27 +563,27 @@ QSplitter {
               <item row="0" column="2">
                <widget class="QCheckBox" name="checkConditions">
                 <property name="toolTip">
-                 <string>Features that trigger the search conditions, provided the seed matches</string>
+                 <string>使用[搜索]中[条件]的条件分析种子</string>
                 </property>
                 <property name="text">
-                 <string>Condition trigger</string>
+                 <string>使用搜索条件分析</string>
                 </property>
                </widget>
               </item>
               <item row="1" column="0" colspan="2">
                <widget class="QPushButton" name="buttonAnalysis">
                 <property name="text">
-                 <string>Analyze</string>
+                 <string>开始分析</string>
                 </property>
                </widget>
               </item>
               <item row="1" column="2">
                <widget class="QCheckBox" name="checkMapOnly">
                 <property name="toolTip">
-                 <string>limits analysis to the selected structures and dimension in the map view</string>
+                 <string>分析地图中显示的群系与结构</string>
                 </property>
                 <property name="text">
-                 <string>Restrict to map selections</string>
+                 <string>使用地图选项分析</string>
                 </property>
                 <property name="checked">
                  <bool>true</bool>
@@ -593,20 +593,20 @@ QSplitter {
               <item row="0" column="1">
                <widget class="QCheckBox" name="checkBiomes">
                 <property name="toolTip">
-                 <string>statistic of biome occurances in area</string>
+                 <string>统计区域内的生物群系</string>
                 </property>
                 <property name="text">
-                 <string>Biomes</string>
+                 <string>分析生物群系</string>
                 </property>
                </widget>
               </item>
               <item row="0" column="0">
                <widget class="QCheckBox" name="checkStructs">
                 <property name="toolTip">
-                 <string>structure positions in area</string>
+                 <string>统计区域内的结构位置</string>
                 </property>
                 <property name="text">
-                 <string>Structures</string>
+                 <string>分析结构</string>
                 </property>
                </widget>
               </item>
@@ -649,7 +649,7 @@ QSplitter {
   </widget>
   <widget class="QToolBar" name="toolBar">
    <property name="windowTitle">
-    <string>toolBar</string>
+    <string>工具栏</string>
    </property>
    <property name="autoFillBackground">
     <bool>false</bool>
@@ -707,7 +707,7 @@ QToolButton:checked {
    </property>
    <widget class="QMenu" name="menuMap">
     <property name="title">
-     <string>Map</string>
+     <string>地图</string>
     </property>
     <addaction name="actionGo_to"/>
     <addaction name="actionScan_seed_for_Quad_Huts"/>
@@ -715,13 +715,13 @@ QToolButton:checked {
    </widget>
    <widget class="QMenu" name="menuHelp">
     <property name="title">
-     <string>Help</string>
+     <string>帮助</string>
     </property>
     <addaction name="actionAbout"/>
    </widget>
    <widget class="QMenu" name="menuFile">
     <property name="title">
-     <string>File</string>
+     <string>文件</string>
     </property>
     <addaction name="actionSave"/>
     <addaction name="actionLoad"/>
@@ -733,7 +733,7 @@ QToolButton:checked {
    </widget>
    <widget class="QMenu" name="menuEdit">
     <property name="title">
-     <string>Edit</string>
+     <string>编辑</string>
     </property>
     <addaction name="actionCopy"/>
     <addaction name="actionPaste"/>
@@ -750,75 +750,76 @@ QToolButton:checked {
   </widget>
   <action name="actionGo_to">
    <property name="text">
-    <string>Go to...</string>
+    <string>定位...</string>
    </property>
   </action>
   <action name="actionScan_seed_for_Quad_Huts">
    <property name="text">
-    <string>Scan seed for Quad-Structures...</string>
+    <string>搜索四连结构...</string>
    </property>
   </action>
   <action name="actionAbout">
    <property name="text">
-    <string>About</string>
+    <string>关于</string>
    </property>
   </action>
   <action name="actionOpen_shadow_seed">
    <property name="text">
-    <string>Open shadow seed</string>
+    <string>打开种子镜像</string>
    </property>
   </action>
   <action name="actionSave">
    <property name="text">
-    <string>Save progress...</string>
+    <string>保存进度...</string>
    </property>
   </action>
   <action name="actionLoad">
    <property name="text">
-    <string>Load progress...</string>
+    <string>打开进度...</string>
    </property>
   </action>
   <action name="actionSearch_seed_list">
    <property name="text">
-    <string>Search seed list...</string>
+    <string>搜索列表中的种子</string>
    </property>
    <property name="toolTip">
-    <string>Load seeds from file for search</string>
+    <string>在读取的种子列表文件内进行搜索</string>
    </property>
   </action>
   <action name="actionSearch_full_seed_space">
    <property name="text">
-    <string>Search full seed space</string>
+    <string>搜索列表中的种子</string>
    </property>
   </action>
   <action name="actionCopy">
    <property name="text">
-    <string>Copy seeds from list</string>
+    <string>复制搜索结果中的种子</string>
    </property>
   </action>
   <action name="actionPaste">
    <property name="text">
-    <string>Paste seeds into list</string>
+    <string>粘贴种子至搜索结果中</string>
    </property>
   </action>
   <action name="actionPreferences">
    <property name="text">
-    <string>Preferences...</string>
+    <string>偏好设定</string>
    </property>
   </action>
   <action name="actionQuit">
    <property name="text">
-    <string>Quit</string>
+    <string>退出</string>
    </property>
   </action>
   <action name="actionAddShadow">
    <property name="text">
-    <string>Add shadow for all seeds</string>
+    <string>在搜索结果中添加
+所有种子的镜像种子</string>
    </property>
   </action>
   <action name="actionExtGen">
    <property name="text">
-    <string>Advanced world settings...</string>
+    <string>高级世界设定...</string>
    </property>
   </action>
  </widget>
