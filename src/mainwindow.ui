@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Cubiomes Viewer 汉化by: 新兵Sinbing</string>
+   <string>Cubiomes Viewer 汉化：新兵Sinbing、SunnySlopes</string>
   </property>
   <property name="windowIcon">
    <iconset resource="../icons.qrc">

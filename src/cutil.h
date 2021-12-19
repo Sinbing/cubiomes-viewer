@@ -17,24 +17,24 @@ inline const char* struct2str(int stype)
 {
     switch (stype)
     {
-    case Desert_Pyramid:    return "desert_pyramid";
-    case Jungle_Temple:     return "jungle_temple";
-    case Swamp_Hut:         return "swamp_hut";
-    case Igloo:             return "igloo";
-    case Village:           return "village";
-    case Ocean_Ruin:        return "ocean_ruin";
-    case Shipwreck:         return "shipwreck";
-    case Monument:          return "monument";
-    case Mansion:           return "mansion";
-    case Outpost:           return "outpost";
-    case Ruined_Portal:     return "ruined_portal";
-    case Ruined_Portal_N:   return "ruined_portal (nether)";
-    case Treasure:          return "treasure";
-    case Mineshaft:         return "mineshaft";
-    case Fortress:          return "fortress";
-    case Bastion:           return "bastion";
-    case End_City:          return "end_city";
-    case End_Gateway:       return "end_gateway";
+    case Desert_Pyramid:    return "沙漠神殿";
+    case Jungle_Temple:     return "丛林神殿";
+    case Swamp_Hut:         return "女巫小屋";
+    case Igloo:             return "冰屋";
+    case Village:           return "村庄";
+    case Ocean_Ruin:        return "海底遗迹";
+    case Shipwreck:         return "沉船";
+    case Monument:          return "海底神殿";
+    case Mansion:           return "林地府邸";
+    case Outpost:           return "掠夺者前哨站";
+    case Ruined_Portal:     return "废弃传送门";
+    case Ruined_Portal_N:   return "废弃传送门(下界)";
+    case Treasure:          return "宝藏";
+    case Mineshaft:         return "废弃矿坑";
+    case Fortress:          return "下界要塞";
+    case Bastion:           return "堡垒遗迹";
+    case End_City:          return "末地城";
+    case End_Gateway:       return "末地(返程)折跃门";
     }
     return "?";
 }

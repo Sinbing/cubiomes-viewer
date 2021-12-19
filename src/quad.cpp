@@ -117,7 +117,7 @@ void Quad::run()
         {
             fprintf(
                 stderr,
-                "Failed to generate tile - "
+                "生成失败 tile - "
                 "MC:%s seed:%" PRId64 " dim:%d @ [%d %d] (%d %d) 1:%d\n",
                 mc2str(g->mc), g->seed, g->dim,
                 x, z, w, h, scale);

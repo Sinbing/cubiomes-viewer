@@ -116,7 +116,7 @@ bool FormGen48::setList48(QString path, bool quiet)
         else
         {
             if (!quiet)
-                QMessageBox::warning(this, "Warning", "Failed to load seed list from file", QMessageBox::Ok);
+                QMessageBox::warning(this, "警告", "无法从文件获取种子列表", QMessageBox::Ok);
             ui->lineList48->setText("[no seeds!] " + finfo.baseName());
         }
     }
@@ -359,7 +359,7 @@ void FormGen48::on_comboLow20_currentIndexChanged(int)
 
 void FormGen48::on_buttonBrowse_clicked()
 {
-    QString fnam = QFileDialog::getOpenFileName(this, "Load seed list", parent->prevdir, "Text files (*.txt);;Any files (*)");
+    QString fnam = QFileDialog::getOpenFileName(this, "加载种子列表", parent->prevdir, "Text files (*.txt);;Any files (*)");
     if (!fnam.isEmpty())
         setList48(fnam, false);
 }

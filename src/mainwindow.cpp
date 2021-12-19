@@ -62,7 +62,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->collapseConstraints->init("Conditions", formCond, false);
     connect(formCond, &FormConditions::changed, this, &MainWindow::onConditionsChanged);
     ui->collapseConstraints->setInfo(
-        "Help: Conditions",
+        "帮助：条件",
         "The search conditions define the properties by which potential seeds "
         "are filtered."
         "\n\n"
@@ -82,7 +82,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->collapseGen48->init("Seed generator (48-bit)", formGen48, false);
     connect(formGen48, &FormGen48::changed, this, &MainWindow::onGen48Changed);
     ui->collapseGen48->setInfo(
-        "Help: Seed generator",
+        "帮助：种子生成器",
         "<html><head/><body><p>"
         "For some searches, the 48-bit structure seed candidates can be "
         "generated without searching, which can vastly reduce the search space "
@@ -111,7 +111,7 @@ MainWindow::MainWindow(QWidget *parent)
     connect(formControl, &FormSearchControl::selectedSeedChanged, this, &MainWindow::onSelectedSeedChanged);
     connect(formControl, &FormSearchControl::searchStatusChanged, this, &MainWindow::onSearchStatusChanged);
     ui->collapseControl->setInfo(
-        "Help: Matching seeds",
+        "帮助：符合条件的种子",
         "<html><head/><body><p>"
         "The list of seeds acts as a buffer onto which suitable seeds are added "
         "when they are found. You can also copy the seed list, or paste seeds "
@@ -144,29 +144,29 @@ MainWindow::MainWindow(QWidget *parent)
     ui->toolBar->addSeparator();
 
     saction.resize(STRUCT_NUM);
-    addMapAction(D_GRID, "grid", "Show grid");
-    addMapAction(D_SLIME, "slime", "Show slime chunks");
-    addMapAction(D_SPAWN, "spawn", "Show world spawn");
-    addMapAction(D_STRONGHOLD, "stronghold", "Show strongholds");
-    addMapAction(D_VILLAGE, "village", "Show villages");
-    addMapAction(D_MINESHAFT, "mineshaft", "Show abandoned mineshafts");
-    addMapAction(D_DESERT, "desert", "Show desert pyramid");
-    addMapAction(D_JUNGLE, "jungle", "Show jungle temples");
-    addMapAction(D_HUT, "hut", "Show swamp huts");
-    addMapAction(D_MONUMENT, "monument", "Show ocean monuments");
-    addMapAction(D_IGLOO, "igloo", "Show igloos");
-    addMapAction(D_MANSION, "mansion", "Show woodland mansions");
-    addMapAction(D_RUINS, "ruins", "Show ocean ruins");
-    addMapAction(D_SHIPWRECK, "shipwreck", "Show shipwrecks");
-    addMapAction(D_TREASURE, "treasure", "Show buried treasures");
-    addMapAction(D_OUTPOST, "outpost", "Show illager outposts");
-    addMapAction(D_PORTAL, "portal", "Show ruined portals");
+    addMapAction(D_GRID, "grid", "显示网格");
+    addMapAction(D_SLIME, "slime", "显示史莱姆区块");
+    addMapAction(D_SPAWN, "spawn", "显示世界出生点");
+    addMapAction(D_STRONGHOLD, "stronghold", "显示要塞");
+    addMapAction(D_VILLAGE, "village", "显示村庄");
+    addMapAction(D_MINESHAFT, "mineshaft", "显示废弃矿道");
+    addMapAction(D_DESERT, "desert", "显示沙漠神殿");
+    addMapAction(D_JUNGLE, "jungle", "显示丛林神殿");
+    addMapAction(D_HUT, "hut", "显示女巫小屋");
+    addMapAction(D_MONUMENT, "monument", "显示海底神殿");
+    addMapAction(D_IGLOO, "igloo", "显示冰屋");
+    addMapAction(D_MANSION, "mansion", "显示林地府邸");
+    addMapAction(D_RUINS, "ruins", "显示海底遗迹");
+    addMapAction(D_SHIPWRECK, "shipwreck", "显示沉船");
+    addMapAction(D_TREASURE, "treasure", "显示宝藏");
+    addMapAction(D_OUTPOST, "outpost", "显示掠夺者前哨站");
+    addMapAction(D_PORTAL, "portal", "显示废弃传送门");
     ui->toolBar->addSeparator();
-    addMapAction(D_FORTESS, "fortress", "Show nether fortresses");
-    addMapAction(D_BASTION, "bastion", "Show bastions");
+    addMapAction(D_FORTESS, "fortress", "显示下界堡垒");
+    addMapAction(D_BASTION, "bastion", "显示堡垒遗迹");
     ui->toolBar->addSeparator();
-    addMapAction(D_ENDCITY, "endcity", "Show end cities");
-    addMapAction(D_GATEWAY, "gateway", "Show end gateways");
+    addMapAction(D_ENDCITY, "endcity", "显示末地城");
+    addMapAction(D_GATEWAY, "gateway", "显示末地返程折跃门");
 
     saction[D_GRID]->setChecked(true);
 
@@ -461,7 +461,7 @@ bool MainWindow::saveProgress(QString fnam, bool quiet)
     if (!file.open(QIODevice::WriteOnly))
     {
         if (!quiet)
-            warning("Warning", "Failed to open file.");
+            warning("警告", "无法打开文件");
         return false;
     }
 
@@ -523,7 +523,7 @@ bool MainWindow::loadProgress(QString fnam, bool quiet)
     if (!file.open(QIODevice::ReadOnly))
     {
         if (!quiet)
-            warning("Warning", "Failed to open file.");
+            warning("警告", "无法打开文件");
         return false;
     }
 
@@ -544,7 +544,7 @@ bool MainWindow::loadProgress(QString fnam, bool quiet)
     if (sscanf(line.toLatin1().data(), "#Version: %d.%d.%d", &major, &minor, &patch) != 3)
         return false;
     if (cmpVers(major, minor, patch) > 0 && !quiet)
-        warning("Warning", "Progress file was created with a newer version.");
+        warning("警告", "该进度是用新版程序导出的！");
 
     while (stream.status() == QTextStream::Ok)
     {
@@ -681,7 +681,7 @@ void MainWindow::on_seedEdit_textChanged(const QString &a)
 
 void MainWindow::on_actionSave_triggered()
 {
-    QString fnam = QFileDialog::getSaveFileName(this, "Save progress", prevdir, "Text files (*.txt);;Any files (*)");
+    QString fnam = QFileDialog::getSaveFileName(this, "保存进度", prevdir, "Text files (*.txt);;Any files (*)");
     if (!fnam.isEmpty())
     {
         QFileInfo finfo(fnam);
@@ -694,10 +694,10 @@ void MainWindow::on_actionLoad_triggered()
 {
     if (formControl->isbusy())
     {
-        warning("Warning", "Cannot load progress: search is still active.");
+        warning("警告", "无法加载该进度: 程序仍在搜索");
         return;
     }
-    QString fnam = QFileDialog::getOpenFileName(this, "Load progress", prevdir, "Text files (*.txt);;Any files (*)");
+    QString fnam = QFileDialog::getOpenFileName(this, "加载进度", prevdir, "Text files (*.txt);;Any files (*)");
     if (!fnam.isEmpty())
     {
         QFileInfo finfo(fnam);
@@ -892,7 +892,7 @@ void MainWindow::on_buttonAnalysis_clicked()
     }
     if (x2 < x1 || z2 < z1)
     {
-        warning("Warning", "Invalid area for analysis");
+        warning("警告", "无法分析该区域");
         return;
     }
 
@@ -947,10 +947,10 @@ void MainWindow::on_buttonAnalysis_clicked()
     if (areawarn)
     {
         QString msg = QString::asprintf(
-                    "Area for analysis is very large (%d, %d).\n"
-                    "The analysis might take a while. Do you want to continue?",
+                    "即将分析的区域过大 (%d, %d)，\n"
+                    "分析可能需要花费一段时间。\n是否继续?",
                     x2-x1+1, z2-z1+1);
-        int button = QMessageBox::warning(this, "Warning", msg, QMessageBox::Cancel, QMessageBox::Yes);
+        int button = QMessageBox::warning(this, "警告", msg, QMessageBox::Cancel, QMessageBox::Yes);
         if (button != QMessageBox::Yes)
             return;
 
@@ -1182,10 +1182,10 @@ void MainWindow::on_buttonAnalysis_clicked()
                 if (items.size() >= 65536)
                 {
                     QMessageBox::warning(
-                        this, "Warning",
+                        this, "警告",
                         QString::asprintf(
-                            "Reached maximum number of results (%d).\n"
-                            "Stopping search.", items.size()),
+                            "即将超过最大允许结果数 (%d).\n"
+                            "停止搜索", items.size()),
                         QMessageBox::Ok);
                     goto L_scan_end;
                 }
@@ -1222,7 +1222,7 @@ void MainWindow::on_buttonExport_clicked()
 
     if (!file.open(QIODevice::WriteOnly))
     {
-        warning("Warning", "Failed to open file.");
+        warning("警告", "打开文件失败");
         return;
     }
 
