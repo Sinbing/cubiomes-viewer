@@ -157,13 +157,13 @@ void QuadListDialog::refresh()
     ui->listQuadStruct->sortByColumn(1, Qt::AscendingOrder);
 
     if (qhn == 0 && qmn == 0)
-        ui->labelMsg->setText("World contains no quad-structures.");
+        ui->labelMsg->setText("这个世界不包含任何四联结构.");
     else if (qhn && qmn)
-        ui->labelMsg->setText(QString::asprintf("World contains %d quad-hut%s and %d quad-monument%s.", qhn, qhn==1?"":"s", qmn, qmn==1?"":"s"));
+        ui->labelMsg->setText(QString::asprintf("这个世界包含 %d 个四联女巫小屋和 %d 个四联海底神殿。", qhn, qmn));
     else if (qhn)
-        ui->labelMsg->setText(QString::asprintf("World contains %d quad-hut%s.", qhn, qhn==1?"":"s"));
+        ui->labelMsg->setText(QString::asprintf("这个世界包含 %d 个四联女巫小屋。", qhn));
     else if (qmn)
-        ui->labelMsg->setText(QString::asprintf("World contains %d quad-monument%s.", qmn, qmn==1?"":"s"));
+        ui->labelMsg->setText(QString::asprintf("这个世界包含 %d 个四联海底神殿。", qmn));
 }
 
 void QuadListDialog::on_buttonGo_clicked()
@@ -174,7 +174,7 @@ void QuadListDialog::on_buttonGo_clicked()
 void QuadListDialog::on_listQuadStruct_customContextMenuRequested(const QPoint &pos)
 {
     QMenu menu(this);
-    menu.addAction("Show in map viewer", this, &QuadListDialog::gotoSwampHut);
+    menu.addAction("在地图上显示", this, &QuadListDialog::gotoSwampHut);
     menu.exec(ui->listQuadStruct->mapToGlobal(pos));
 }
 

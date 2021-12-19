@@ -2,6 +2,14 @@
 <ui version="4.0">
  <class>ConfigDialog</class>
  <widget class="QDialog" name="ConfigDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>309</width>
+    <height>458</height>
+   </rect>
+  </property>
   <property name="windowTitle">
    <string>偏好设定</string>
   </property>
@@ -93,14 +101,14 @@
       <item row="4" column="0" colspan="4">
        <widget class="QCheckBox" name="checkBBoxes">
         <property name="text">
-         <string>Outline known bounding boxes</string>
+         <string>画出已知结构范围</string>
         </property>
        </widget>
       </item>
       <item row="0" column="0">
        <widget class="QLabel" name="label_4">
         <property name="text">
-         <string>GUI 风格:</string>
+         <string>界面风格:</string>
         </property>
        </widget>
       </item>

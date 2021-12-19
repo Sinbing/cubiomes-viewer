@@ -61,9 +61,9 @@ FilterDialog::FilterDialog(FormConditions *parent, Config *config, int mcversion
 
     textDescription = new QTextEdit(this);
     textDescription->setSizeAdjustPolicy(QAbstractScrollArea::AdjustToContents);
-    ui->collapseDescription->init("Description", textDescription, true);
+    ui->collapseDescription->init("描述", textDescription, true);
 
-    QString mcs = "MC ";
+    QString mcs = "版本";
     mcs += (mc2str(mc) ? mc2str(mc) : "?");
     ui->labelMC->setText(mcs);
 
@@ -208,22 +208,22 @@ FilterDialog::FilterDialog(FormConditions *parent, Config *config, int mcversion
     SETUP_TEMPCAT_SPINBOX(Special+Lush);
     SETUP_TEMPCAT_SPINBOX(Special+Cold);
 
-    addVariant("plains_fountain_01", plains, 0);
-    addVariant("plains_meeting_point_1", plains, 1);
-    addVariant("plains_meeting_point_2", plains, 2);
-    addVariant("plains_meeting_point_3", plains, 3);
-    addVariant("desert_meeting_point_1", desert, 1);
-    addVariant("desert_meeting_point_2", desert, 2);
-    addVariant("desert_meeting_point_3", desert, 3);
-    addVariant("savanna_meeting_point_1", savanna, 1);
-    addVariant("savanna_meeting_point_2", savanna, 2);
-    addVariant("savanna_meeting_point_3", savanna, 3);
-    addVariant("savanna_meeting_point_4", savanna, 4);
-    addVariant("taiga_meeting_point_1", taiga, 1);
-    addVariant("taiga_meeting_point_2", taiga, 2);
-    addVariant("snowy_meeting_point_1", snowy_tundra, 1);
-    addVariant("snowy_meeting_point_2", snowy_tundra, 2);
-    addVariant("snowy_meeting_point_3", snowy_tundra, 3);
+    addVariant("平原 喷泉", plains, 0);
+    addVariant("平原 会合点1", plains, 1);
+    addVariant("平原 会合点2", plains, 2);
+    addVariant("平原 会合点3", plains, 3);
+    addVariant("沙漠 会合点1", desert, 1);
+    addVariant("沙漠 会合点2", desert, 2);
+    addVariant("沙漠 会合点3", desert, 3);
+    addVariant("热带草原 会合点1", savanna, 1);
+    addVariant("热带草原 会合点2", savanna, 2);
+    addVariant("热带草原 会合点3", savanna, 3);
+    addVariant("热带草原 会合点4", savanna, 4);
+    addVariant("针叶林 会合点1", taiga, 1);
+    addVariant("针叶林 会合点2", taiga, 2);
+    addVariant("雪原 会合点1", snowy_tundra, 1);
+    addVariant("雪原 会合点2", snowy_tundra, 2);
+    addVariant("雪原 会合点3", snowy_tundra, 3);
 
     ui->scrollBiomes->setStyleSheet(
             "QCheckBox::indicator:unchecked     { image: url(:/icons/check0.png); }\n"
@@ -432,17 +432,17 @@ void FilterDialog::updateMode()
 
     if (ft.step > 1)
     {
-        loc = QString::asprintf("Location (coordinates are multiplied by x%d)", ft.step);
-        areatip = QString::asprintf("From floor(-[S] / 2) x%d to floor([S] / 2) x%d on both axes (inclusive)", ft.step, ft.step);
-        lowtip = QString::asprintf("Lower bound x%d (inclusive)", ft.step);
-        uptip = QString::asprintf("Upper bound x%d (inclusive)", ft.step);
+        loc = QString::asprintf("位置 (坐标乘数 ×%d)", ft.step);
+        areatip = QString::asprintf("X和Z坐标：从 floor(-[S] / 2) ×%d 到 floor([S] / 2) ×%d (包含边界)", ft.step, ft.step);
+        lowtip = QString::asprintf("下边界 ×%d (含)", ft.step);
+        uptip = QString::asprintf("上边界 ×%d (含)", ft.step);
     }
     else
     {
-        loc = "Location";
-        areatip = "From floor(-[S] / 2) to floor([S] / 2) on both axes (inclusive)";
-        lowtip = QString::asprintf("Lower bound (inclusive)");
-        uptip = QString::asprintf("Upper bound (inclusive)");
+        loc = "位置";
+        areatip = "X和Z坐标：从 floor(-[S] / 2) 到 floor([S] / 2) (包含边界)";
+        lowtip = QString::asprintf("下边界 (含)");
+        uptip = QString::asprintf("上边界 (含)");
     }
     ui->groupBoxPosition->setTitle(loc);
     ui->labelSquareArea->setToolTip(areatip);
@@ -592,13 +592,10 @@ int FilterDialog::warnIfBad(Condition cond)
         if (workitemsize > workwarn)
         {
             QString text =
-                    "The biome filter you have entered may take a while to check. "
-                    "You should consider using a smaller area with a larger scaling "
-                    "instead and/or reduce the number of seeds per work item "
-                    "under Edit>Perferences."
+                    "你刚刚选择的群系条件可能需要一段时间进行查询。你应该考虑缩小搜索区域或者在 编辑>偏好设置 中减少单线程单次搜索种子数。"
                     "\n\n"
-                    "Are you sure you want to continue?";
-            return QMessageBox::warning(this, "Performance Expensive Condition", text, QMessageBox::Ok | QMessageBox::Cancel);
+                    "是否继续?";
+            return QMessageBox::warning(this, "这是一个需要消耗大量计算性能的条件", text, QMessageBox::Ok | QMessageBox::Cancel);
         }
     }
     return QMessageBox::Ok;
@@ -754,7 +751,7 @@ void FilterDialog::on_comboBoxCat_currentIndexChanged(int idx)
     ui->comboBoxType->clear();
 
     int slot = 0;
-    ui->comboBoxType->insertItem(slot, "Select filter", QVariant::fromValue((int)F_SELECT));
+    ui->comboBoxType->insertItem(slot, "选择筛选条件", QVariant::fromValue((int)F_SELECT));
 
     const FilterInfo *ft_list[FILTER_MAX] = {};
     const FilterInfo *ft;

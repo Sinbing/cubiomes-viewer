@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Cubiomes Viewer 汉化by: 新兵Sinbing</string>
+   <string>Cubiomes Viewer 汉化：新兵Sinbing</string>
   </property>
   <property name="windowIcon">
    <iconset resource="../icons.qrc">
@@ -73,7 +73,7 @@
              <string>种子可以输入数字或文字，留空为随机种子。</string>
             </property>
             <property name="text">
-             <string>seed:</string>
+             <string>种子号:</string>
             </property>
             <property name="alignment">
              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -86,7 +86,7 @@
              <string>Minecraft 游戏版本</string>
             </property>
             <property name="text">
-             <string>MC</string>
+             <string>版本</string>
             </property>
            </widget>
           </item>
@@ -102,7 +102,7 @@
              <string>种子可以输入数字或文字，留空为随机种子。</string>
             </property>
             <property name="text">
-             <string>(随机)</string>
+             <string>(枚举)</string>
             </property>
            </widget>
           </item>
@@ -223,7 +223,7 @@
           <item row="1" column="0" colspan="2">
            <widget class="QCheckBox" name="checkLarge">
             <property name="text">
-             <string>巨型生物群系</string>
+             <string>巨大化生物群系</string>
             </property>
            </widget>
           </item>
@@ -232,7 +232,7 @@
         <item>
          <widget class="QTabWidget" name="tabContainer">
           <property name="currentIndex">
-           <number>0</number>
+           <number>1</number>
           </property>
           <widget class="QWidget" name="tabSearch">
            <property name="sizePolicy">
@@ -300,8 +300,8 @@ QToolButton {
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>1232</width>
-                 <height>669</height>
+                 <width>1219</width>
+                 <height>667</height>
                 </rect>
                </property>
                <property name="sizePolicy">
@@ -534,7 +534,7 @@ QSplitter {
             <item row="2" column="3" colspan="2">
              <widget class="QPushButton" name="buttonFromVisible">
               <property name="text">
-               <string>从地图导入范围</string>
+               <string>地图可见范围</string>
               </property>
              </widget>
             </item>
@@ -583,7 +583,7 @@ QSplitter {
                  <string>分析地图中显示的群系与结构</string>
                 </property>
                 <property name="text">
-                 <string>使用地图选项分析</string>
+                 <string>使用地图可见选项分析</string>
                 </property>
                 <property name="checked">
                  <bool>true</bool>

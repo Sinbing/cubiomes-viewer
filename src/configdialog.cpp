@@ -124,7 +124,7 @@ void ConfigDialog::on_buttonBox_clicked(QAbstractButton *button)
 void ConfigDialog::on_buttonBiomeColor_clicked()
 {
     QFileInfo finfo(conf.biomeColorPath);
-    QString fnam = QFileDialog::getOpenFileName(this, "Load biome color map", finfo.absolutePath(), "Text files (*.txt);;Any files (*)");
+    QString fnam = QFileDialog::getOpenFileName(this, "加载群系颜色图", finfo.absolutePath(), "Text files (*.txt);;Any files (*)");
     if (!fnam.isNull())
     {
         conf.biomeColorPath = fnam;
@@ -155,5 +155,5 @@ void ConfigDialog::on_buttonColorHelp_clicked()
             "128&nbsp;[255&nbsp;255&nbsp;0]"
             "</p></body></html>"
             ;
-    QMessageBox::information(this, "Help: custom biome colors", msg, QMessageBox::Ok);
+    QMessageBox::information(this, "帮助：自定义群系颜色", msg, QMessageBox::Ok);
 }

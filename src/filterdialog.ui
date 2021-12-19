@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>新增筛选器</string>
+   <string>新增条件</string>
   </property>
   <layout class="QGridLayout" name="gridLayout_3">
    <item row="0" column="0">
@@ -19,7 +19,7 @@
      <item row="0" column="0">
       <widget class="QLabel" name="labelMC">
        <property name="text">
-        <string>MC: 1.X</string>
+        <string>版本: 1.X</string>
        </property>
       </widget>
      </item>
@@ -42,7 +42,7 @@
        </property>
        <item>
         <property name="text">
-         <string>选择类别</string>
+         <string>选择</string>
         </property>
        </item>
        <item>
@@ -74,7 +74,7 @@
        </item>
        <item>
         <property name="text">
-         <string>群系筛选</string>
+         <string>群系</string>
         </property>
         <property name="icon">
          <iconset resource="../icons.qrc">
@@ -135,7 +135,7 @@
        </property>
        <item>
         <property name="text">
-         <string>选择筛选器</string>
+         <string>选择</string>
         </property>
        </item>
       </widget>
@@ -143,7 +143,7 @@
      <item row="0" column="1">
       <widget class="QLabel" name="labelFilterType">
        <property name="text">
-        <string>筛选器类型:</string>
+        <string>条件类型:</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -329,7 +329,7 @@
        <item>
         <widget class="QTabWidget" name="tabWidget">
          <property name="currentIndex">
-          <number>0</number>
+          <number>1</number>
          </property>
          <property name="usesScrollButtons">
           <bool>false</bool>
@@ -377,8 +377,8 @@
                <rect>
                 <x>0</x>
                 <y>0</y>
-                <width>568</width>
-                <height>249</height>
+                <width>548</width>
+                <height>225</height>
                </rect>
               </property>
               <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -464,13 +464,13 @@
          </widget>
          <widget class="QWidget" name="tabVariants">
           <attribute name="title">
-           <string>变种</string>
+           <string>村庄种类</string>
           </attribute>
           <layout class="QGridLayout" name="gridLayout_5">
            <item row="0" column="1">
             <widget class="QCheckBox" name="checkAbandoned">
              <property name="text">
-              <string>僵尸村</string>
+              <string>是否为僵尸变种</string>
              </property>
             </widget>
            </item>
@@ -480,7 +480,7 @@
               <string>仅搜索符合以下选择变种之一的结构</string>
              </property>
              <property name="text">
-              <string>搜索特定变种</string>
+              <string>搜索特定种类</string>
              </property>
             </widget>
            </item>
@@ -494,8 +494,8 @@
                <rect>
                 <x>0</x>
                 <y>0</y>
-                <width>568</width>
-                <height>285</height>
+                <width>548</width>
+                <height>258</height>
                </rect>
               </property>
               <layout class="QVBoxLayout" name="verticalLayout_3">
@@ -536,8 +536,7 @@
        </property>
        <property name="icon">
         <iconset theme="dialog-cancel">
-         <normaloff/>
-        </iconset>
+         <normaloff>.</normaloff>.</iconset>
        </property>
       </widget>
      </item>
@@ -548,8 +547,7 @@
        </property>
        <property name="icon">
         <iconset theme="dialog-ok">
-         <normaloff/>
-        </iconset>
+         <normaloff>.</normaloff>.</iconset>
        </property>
       </widget>
      </item>

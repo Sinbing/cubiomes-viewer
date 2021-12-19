@@ -83,7 +83,7 @@
      </attribute>
      <column>
       <property name="text">
-       <string>十六进制（Low-48|Top-16）</string>
+       <string>十六进制（低12位|高4位）</string>
       </property>
       <property name="textAlignment">
        <set>AlignLeading|AlignVCenter</set>
@@ -143,7 +143,7 @@
         <string>在搜索到下一个匹配条件的种子时停止。</string>
        </property>
        <property name="text">
-        <string>有结果时停止</string>
+        <string>获得结果时立刻停止</string>
        </property>
        <property name="checked">
         <bool>true</bool>
