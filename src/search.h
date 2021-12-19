@@ -119,6 +119,8 @@ static const struct FilterList
 
         const char *ref_desc =
             "<html><head/><body><p>"
+            "(朕的专用翻译官罢工了)"
+            "</p><p>"
             "A basic search will test each condition once, where relative "
             "locations refer to the center of their parent. "
             "This can be undesirable if the parent can have multiple triggering "
@@ -144,374 +146,356 @@ static const struct FilterList
         list[F_REFERENCE_1] = FilterInfo{
             CAT_HELPER, 0, 1, 1, 0, 0, 1, 0, MC_1_0, MC_NEWEST, 0, 0, disp++,
             ":icons/reference.png",
-            "Reference point 1:1",
+            "参照点 1:1",
             ref_desc
         };
         list[F_REFERENCE_16] = FilterInfo{
             CAT_HELPER, 0, 1, 1, 0, 0, 16, 0, MC_1_0, MC_NEWEST, 0, 0, disp++,
             ":icons/reference.png",
-            "Reference point 1:16",
+            "参照点 1:16",
             ref_desc
         };
         list[F_REFERENCE_64] = FilterInfo{
             CAT_HELPER, 0, 1, 1, 0, 0, 64, 0, MC_1_0, MC_NEWEST, 0, 0, disp++,
             ":icons/reference.png",
-            "Reference point 1:64",
+            "参照点 1:64",
             ref_desc
         };
         list[F_REFERENCE_256] = FilterInfo{
             CAT_HELPER, 0, 1, 1, 0, 0, 256, 0, MC_1_0, MC_NEWEST, 0, 0, disp++,
             ":icons/reference.png",
-            "Reference point 1:256",
+            "参照点 1:256",
             ref_desc
         };
         list[F_REFERENCE_512] = FilterInfo{
             CAT_HELPER, 0, 1, 1, 0, 0, 512, 0, MC_1_0, MC_NEWEST, 0, 0, disp++,
             ":icons/reference.png",
-            "Reference point 1:512",
+            "参照点 1:512",
             ref_desc
         };
         list[F_REFERENCE_1024] = FilterInfo{
             CAT_HELPER, 0, 1, 1, 0, 0, 1024, 0, MC_1_0, MC_NEWEST, 0, 0, disp++,
             ":icons/reference.png",
-            "Reference point 1:1024",
+            "参照点 1:1024",
             ref_desc
         };
         list[F_SCALE_TO_NETHER] = FilterInfo{
             CAT_HELPER, 0, 0, 0, 0, 0, 1, 0, MC_1_0, MC_NEWEST, 0, 0, disp++,
             ":icons/portal.png",
-            "Coordinate factor x/8",
-            "Divides relative location by 8, from Overworld to Nether."
+            "坐标系数 x/8",
+            "将坐标除以8，用作主世界到地狱的坐标转换。"
         };
         list[F_SCALE_TO_OVERWORLD] = FilterInfo{
             CAT_HELPER, 0, 0, 0, 0, 0, 1, 0, MC_1_0, MC_NEWEST, 0, 0, disp++,
             ":icons/portal.png",
-            "Coordinate factor x*8",
-            "Multiplies relative location by 8, from Nether to Overworld."
+            "坐标系数 x*8",
+            "将坐标乘以8，用作地狱到主世界的坐标转换."
         };
 
         list[F_QH_IDEAL] = FilterInfo{
             CAT_QUAD, 0, 1, 1, 0, Swamp_Hut, 512, 0, MC_1_4, MC_NEWEST, 0, 0, disp++,
             ":icons/quad.png",
-            "Quad-hut (ideal)",
-            "The lower 48-bits provide potential for four swamp huts in "
-            "spawning range, in one of the best configurations that exist."
+            "四联女巫小屋(理想型)",
+            "种子的低48位(二进制)使得该种子具有成为最佳配置的四联女巫小屋的可能性"
         };
 
         list[F_QH_CLASSIC] = FilterInfo{
             CAT_QUAD, 0, 1, 1, 0, Swamp_Hut, 512, 0, MC_1_4, MC_NEWEST, 0, 0, disp++,
             ":icons/quad.png",
-            "Quad-hut (classic)",
-            "The lower 48-bits provide potential for four swamp huts in "
-            "spawning range, in one of the \"classic\" configurations. "
-            "(Checks for huts in the nearest 2x2 chunk corners of each "
-            "region.)"
+            "四联女巫小屋(经典型)",
+            "种子的低48位(二进制)使得该种子具有成为经典配置的四联女巫小屋的可能性"
         };
 
         list[F_QH_NORMAL] = FilterInfo{
             CAT_QUAD, 0, 1, 1, 0, Swamp_Hut, 512, 0, MC_1_4, MC_NEWEST, 0, 0, disp++,
             ":icons/quad.png",
-            "Quad-hut (normal)",
-            "The lower 48-bits provide potential for four swamp huts in "
-            "spawning range, such that all of them are within 128 blocks "
-            "of a single AFK location, including a vertical tollerance "
-            "for a fall damage chute."
+            "四联女巫小屋(普通型)",
+            "种子的低48位(二进制)使得该种子具有成为普通配置的四联女巫小屋的可能性"
+            "(保证4个小屋都在单人挂机距离内并且都有足够的垂直空间来摔死女巫)"
         };
 
         list[F_QH_BARELY] = FilterInfo{
             CAT_QUAD, 0, 1, 1, 0, Swamp_Hut, 512, 0, MC_1_4, MC_NEWEST, 0, 0, disp++,
             ":icons/quad.png",
-            "Quad-hut (barely)",
-            "The lower 48-bits provide potential for four swamp huts in "
-            "spawning range, in any configuration, such that the bounding "
-            "boxes are within 128 blocks of a single AFK location."
+            "四联女巫小屋(勉强型)",
+            "种子的低48位(二进制)使得该种子具有成为普通配置的四联女巫小屋的可能性"
+            "(只能保证4个小屋都在单人挂机距离内)"
         };
 
         list[F_QM_95] = FilterInfo{
             CAT_QUAD, 0, 1, 1, 0, Monument, 512, 0, MC_1_8, MC_NEWEST, 0, 0, disp++,
             ":icons/quad.png",
-            "Quad-ocean-monument (>95%)",
-            "The lower 48-bits provide potential for 95% of the area of "
-            "four ocean monuments to be within 128 blocks of an AFK "
-            "location."
+            "四联海底神殿(>95%)",
+            "种子的低48位(二进制)使得该种子具有成为四联海底神殿的可能性，"
+            "并且有超过95%的面积落在单人挂机距离内"
         };
 
         list[F_QM_90] = FilterInfo{
             CAT_QUAD, 0, 1, 1, 0, Monument, 512, 0, MC_1_8, MC_NEWEST, 0, 0, disp++,
             ":icons/quad.png",
-            "Quad-ocean-monument (>90%)",
-            "The lower 48-bits provide potential for 90% of the area of "
-            "four ocean monuments to be within 128 blocks of an AFK "
-            "location."
+            "四联海底神殿(>90%)",
+            "种子的低48位(二进制)使得该种子具有成为四联海底神殿的可能性，"
+            "并且有超过90%的面积落在单人挂机距离内"
         };
 
         list[F_BIOME] = FilterInfo{
             CAT_BIOMES, 1, 1, 1, L_VORONOI_1, 0, 1, 0, MC_1_0, MC_1_17, 0, 1, disp++, // disable for 1.18
             ":icons/map.png",
-            "Biome filter 1:1",
-            "Only seeds with the included (+) biomes in the specified area and "
-            "discard those that have biomes that are explicitly excluded (-)."
+            "群系筛选 1:1",
+            "在指定范围内包括所有你想要的(+)群系并排除所有你不要的(-)"
         };
 
         list[F_BIOME_4] = FilterInfo{
             CAT_BIOMES, 1, 1, 1, 0, 0, 4, 0, MC_1_0, MC_NEWEST, 0, 1, disp++,
             ":icons/map.png",
-            "Biome filter 1:4",
-            "Only seeds with the included (+) biomes in the specified area and "
-            "discard those that have biomes that are explicitly excluded (-)."
+            "群系筛选 1:4",
+            "在指定范围内包括所有你想要的(+)群系并排除所有你不要的(-)"
         };
         list[F_BIOME_16] = FilterInfo{
             CAT_BIOMES, 1, 1, 1, 0, 0, 16, 0, MC_1_0, MC_NEWEST, 0, 1, disp++,
             ":icons/map.png",
-            "Biome filter 1:16",
-            "Only seeds with the included (+) biomes in the specified area and "
-            "discard those that have biomes that are explicitly excluded (-)."
+            "群系筛选 1:16",
+            "在指定范围内包括所有你想要的(+)群系并排除所有你不要的(-)"
         };
         list[F_BIOME_64] = FilterInfo{
             CAT_BIOMES, 1, 1, 1, 0, 0, 64, 0, MC_1_0, MC_NEWEST, 0, 1, disp++,
             ":icons/map.png",
-            "Biome filter 1:64",
-            "Only seeds with the included (+) biomes in the specified area and "
-            "discard those that have biomes that are explicitly excluded (-)."
+            "群系筛选 1:64",
+            "在指定范围内包括所有你想要的(+)群系并排除所有你不要的(-)"
         };
         list[F_BIOME_256] = FilterInfo{
             CAT_BIOMES, 1, 1, 1, 0, 0, 256, 0, MC_1_0, MC_NEWEST, 0, 1, disp++,
             ":icons/map.png",
-            "Biome filter 1:256",
-            "Only seeds with the included (+) biomes in the specified area and "
-            "discard those that have biomes that are explicitly excluded (-)."
+            "群系筛选 1:256",
+            "在指定范围内包括所有你想要的(+)群系并排除所有你不要的(-)"
         };
 
         list[F_BIOME_4_RIVER] = FilterInfo{
             CAT_BIOMES, 1, 1, 1, L_RIVER_MIX_4, 0, 4, 0, MC_1_13, MC_1_17, 0, 0, disp++,
             ":icons/map.png",
-            "Biome filter 1:4 RIVER",
-            "Only seeds with the included (+) biomes in the specified area and "
-            "discard those that have biomes that are explicitly excluded (-) "
-            "at layer RIVER with scale 1:4. "
-            "This layer does not generate ocean variants."
+            "群系筛选 1:4 河流",
+            "在指定范围内包括所有你想要的(+)群系并排除所有你不要的(-)"
+            "但是只生成到1:4层的河流为止，不生成海洋变种"
         };
         list[F_BIOME_256_OTEMP] = FilterInfo{
             CAT_BIOMES, 0, 1, 1, L_OCEAN_TEMP_256, 0, 256, 0, MC_1_13, MC_1_17, 0, 0, disp++,
             ":icons/map.png",
-            "Biome filter 1:256 O.TEMP",
-            "Only seeds with the included (+) biomes in the specified area and "
-            "discard those that have biomes that are explicitly excluded (-) "
-            "at layer OCEAN TEMPERATURE with scale 1:256. "
-            "This generation layer depends only on the lower 48-bits of the seed."
+            "群系筛选 1:256 海洋温度",
+            "在指定范围内包括所有你想要的(+)群系并排除所有你不要的(-)"
+            "仅生成到决定海洋温度的1:256. "
+            "这部分群系生成仅由种子低48位决定."
         };
         list[F_TEMPS] = FilterInfo{
             CAT_BIOMES, 1, 1, 1, 0, 0, 1024, 0, MC_1_7, MC_1_17, 0, 0, disp++,
             ":icons/tempcat.png",
-            "Temperature categories",
-            "Checks that the area has a minimum of all the required temperature categories."
+            "温度类别",
+            "检查这块区域是否包含大于等于你所指定的数目的温度群系"
         };
 
         list[F_BIOME_NETHER_1] = FilterInfo{
             CAT_NETHER, 1, 1, 1, 0, 0, 1, 0, MC_1_16, 0, -1, 1, disp++, // disabled
             ":icons/nether.png",
-            "Nether biome filter 1:1 (disabled)",
-            "Nether biomes after voronoi scaling to 1:1."
+            "下界群系筛选 1:1 (disabled)",
+            "通过泰森多边形法算到 1:1 的下界群系"
         };
         list[F_BIOME_NETHER_4] = FilterInfo{
             CAT_NETHER, 0, 1, 1, 0, 0, 4, 0, MC_1_16, MC_NEWEST, -1, 0, disp++,
             ":icons/nether.png",
-            "Nether biome filter 1:4",
-            "Nether biomes with normal noise sampling at scale 1:4."
+            "下界群系筛选 1:4",
+            "使用正常噪声生成后在 1:4 的尺度下取样的下界群系"
         };
         list[F_BIOME_NETHER_16] = FilterInfo{
             CAT_NETHER, 0, 1, 1, 0, 0, 16, 0, MC_1_16, MC_NEWEST, -1, 0, disp++,
             ":icons/nether.png",
-            "Nether biome filter 1:16",
-            "Nether biomes, but only sampled at scale 1:16."
+            "下界群系筛选 1:16",
+            "使用正常噪声生成后在 1:16 的尺度下取样的下界群系"
         };
         list[F_BIOME_NETHER_64] = FilterInfo{
             CAT_NETHER, 0, 1, 1, 0, 0, 64, 0, MC_1_16, MC_NEWEST, -1, 0, disp++,
             ":icons/nether.png",
-            "Nether biome filter 1:64",
-            "Nether biomes, but only sampled at scale 1:64."
+            "下界群系筛选 1:64",
+            "使用正常噪声生成后在 1:64 的尺度下取样的下界群系"
         };
         list[F_BIOME_NETHER_256] = FilterInfo{
             CAT_NETHER, 0, 1, 1, 0, 0, 256, 0, MC_1_16, MC_NEWEST, -1, 0, disp++,
             ":icons/nether.png",
-            "Nether biome filter 1:256",
-            "Nether biomes, but only sampled at scale 1:256."
+            "下界群系筛选 1:256",
+            "使用正常噪声生成后在 1:256 的尺度下取样的下界群系"
         };
 
         list[F_BIOME_END_1] = FilterInfo{
             CAT_END, 1, 1, 1, 0, 0, 1, 0, MC_1_9, 0, +1, 1, disp++, // disabled
             ":icons/the_end.png",
-            "End biome filter 1:1 (disabled)",
-            "End biomes after voronoi scaling to 1:1."
+            "末地群系筛选 1:1 (disabled)",
+            "通过泰森多边形法算到 1:1 的末地群系"
         };
         list[F_BIOME_END_4] = FilterInfo{
             CAT_END, 0, 1, 1, 0, 0, 4, 0, MC_1_9, MC_NEWEST, +1, 0, disp++,
             ":icons/the_end.png",
-            "End biome filter 1:4",
-            "End biomes sampled at scale 1:4. Note this is just a simple upscale of 1:16. "
+            "末地群系筛选 1:4",
+            "在 1:4 尺度下取样的末地群系生成。注意其只是 1:16 的放大"
         };
         list[F_BIOME_END_16] = FilterInfo{
             CAT_END, 0, 1, 1, 0, 0, 16, 0, MC_1_9, MC_NEWEST, +1, 0, disp++,
             ":icons/the_end.png",
-            "End biome filter 1:16",
-            "End biomes with normal sampling at scale 1:16. "
+            "末地群系筛选 1:16",
+            "在 1:16 尺度下正常取样的末地群系生成"
         };
         list[F_BIOME_END_64] = FilterInfo{
             CAT_END, 0, 1, 1, 0, 0, 64, 0, MC_1_9, MC_NEWEST, +1, 0, disp++,
             ":icons/the_end.png",
-            "End biome filter 1:64",
-            "End biomes with lossy sampling at scale 1:64. "
+            "末地群系筛选 1:64",
+            "在 1:64 尺度下松散取样的末地群系生成"
         };
 
         list[F_SPAWN] = FilterInfo{
             CAT_OTHER, 1, 1, 1, 0, 0, 1, 0, MC_1_0, MC_NEWEST, 0, 0, disp++,
             ":icons/spawn.png",
-            "Spawn",
+            "出生点",
             ""
         };
 
         list[F_SLIME] = FilterInfo{
             CAT_OTHER, 0, 1, 1, 0, 0, 16, 1, MC_1_0, MC_NEWEST, 0, 0, disp++,
             ":icons/slime.png",
-            "Slime chunk",
+            "史莱姆区块",
             ""
         };
 
         list[F_STRONGHOLD] = FilterInfo{
             CAT_STRUCT, 1, 1, 1, 0, 0, 1, 1, MC_1_0, MC_NEWEST, 0, 0, disp++,
             ":icons/stronghold.png",
-            "Stronghold",
+            "要塞",
             ""
         };
 
         list[F_VILLAGE] = FilterInfo{
             CAT_STRUCT, 1, 1, 1, 0, Village, 1, 1, MC_1_0, MC_NEWEST, 0, 0, disp++,
             ":icons/village.png",
-            "Village",
+            "村庄",
             ""
         };
 
         list[F_MINESHAFT] = FilterInfo{
             CAT_STRUCT, 1, 1, 1, 0, Mineshaft, 1, 1, MC_1_0, MC_NEWEST, 0, 0, disp++,
             ":icons/mineshaft.png",
-            "Abandoned mineshaft",
+            "废弃矿井",
             ""
         };
 
         list[F_DESERT] = FilterInfo{
             CAT_STRUCT, 1, 1, 1, 0, Desert_Pyramid, 1, 1, MC_1_3, MC_NEWEST, 0, 0, disp++,
             ":icons/desert.png",
-            "Desert pyramid",
-            "In version 1.18, desert pyramids depend on surface height and may fail to "
-            "generate near caves/aquifers, rivers and oceans."
+            "沙漠神殿",
+            "注意，在1.18中，林地府邸、沙漠神殿和丛林神殿的生成还会考虑其表面的高度，"
+            "所以其在（含水）洞穴、河流或者海洋群系（甚至是较高的沙丘）周围可能会生成失败"
         };
 
         list[F_JUNGLE] = FilterInfo{
             CAT_STRUCT, 1, 1, 1, 0, Jungle_Temple, 1, 1, MC_1_3, MC_NEWEST, 0, 0, disp++,
             ":icons/jungle.png",
-            "Jungle temple",
-            "In version 1.18, jungle temples depend on surface height and may fail to "
-            "generate near caves/aquifers, rivers and oceans."
+            "丛林神殿",
+            "注意，在1.18中，林地府邸、沙漠神殿和丛林神殿的生成还会考虑其表面的高度，"
+            "所以其在（含水）洞穴、河流或者海洋群系周围可能会生成失败"
         };
 
         list[F_HUT] = FilterInfo{
             CAT_STRUCT, 1, 1, 1, 0, Swamp_Hut, 1, 1, MC_1_4, MC_NEWEST, 0, 0, disp++,
             ":icons/hut.png",
-            "Swamp hut",
+            "女巫小屋",
             ""
         };
 
         list[F_MONUMENT] = FilterInfo{
             CAT_STRUCT, 1, 1, 1, 0, Monument, 1, 1, MC_1_8, MC_NEWEST, 0, 0, disp++,
             ":icons/monument.png",
-            "Ocean monument",
+            "海底神殿",
             ""
         };
 
         list[F_IGLOO] = FilterInfo{
             CAT_STRUCT, 1, 1, 1, 0, Igloo, 1, 1, MC_1_9, MC_NEWEST, 0, 0, disp++,
             ":icons/igloo.png",
-            "Igloo",
+            "冰屋",
             ""
         };
 
         list[F_MANSION] = FilterInfo{
             CAT_STRUCT, 1, 1, 1, 0, Mansion, 1, 1, MC_1_11, MC_NEWEST, 0, 0, disp++,
             ":icons/mansion.png",
-            "Woodland mansion",
-            "In version 1.18, mansions depend on surface height and may fail to "
-            "generate near caves/aquifers, rivers and oceans."
+            "林地府邸",
+            "注意，在1.18中，林地府邸、沙漠神殿和丛林神殿的生成还会考虑其表面的高度，"
+            "所以其在（含水）洞穴、河流或者海洋群系周围可能会生成失败"
         };
 
         list[F_RUINS] = FilterInfo{
             CAT_STRUCT, 1, 1, 1, 0, Ocean_Ruin, 1, 1, MC_1_13, MC_NEWEST, 0, 0, disp++,
             ":icons/ruins.png",
-            "Ocean ruins",
+            "海底遗迹",
             ""
         };
 
         list[F_SHIPWRECK] = FilterInfo{
             CAT_STRUCT, 1, 1, 1, 0, Shipwreck, 1, 1, MC_1_13, MC_NEWEST, 0, 0, disp++,
             ":icons/shipwreck.png",
-            "Shipwreck",
+            "沉船",
             ""
         };
 
         list[F_TREASURE] = FilterInfo{
             CAT_STRUCT, 1, 1, 1, 0, Treasure, 1, 1, MC_1_13, MC_NEWEST, 0, 0, disp++,
             ":icons/treasure.png",
-            "Buried treasure",
+            "宝藏",
             ""
         };
 
         list[F_OUTPOST] = FilterInfo{
             CAT_STRUCT, 1, 1, 1, 0, Outpost, 1, 1, MC_1_14, MC_NEWEST, 0, 0, disp++,
             ":icons/outpost.png",
-            "Pillager outpost",
+            "掠夺者前哨站",
             ""
         };
 
         list[F_PORTAL] = FilterInfo{
             CAT_STRUCT, 0, 1, 1, 0, Ruined_Portal, 1, 1, MC_1_16, MC_NEWEST, 0, 0, disp++,
             ":icons/portal.png",
-            "Ruined portal (overworld)",
+            "废弃的传送门(主世界)",
             ""
         };
 
         list[F_PORTALN] = FilterInfo{
             CAT_STRUCT, 0, 1, 1, 0, Ruined_Portal_N, 1, 1, MC_1_16, MC_NEWEST, -1, 0, disp++,
             ":icons/portal.png",
-            "Ruined portal (nether)",
+            "废弃的传送门(下界)",
             ""
         };
 
         list[F_FORTRESS] = FilterInfo{
             CAT_STRUCT, 0, 1, 1, 0, Fortress, 1, 1, MC_1_0, MC_NEWEST, -1, 0, disp++,
             ":icons/fortress.png",
-            "Nether fortress",
+            "下界堡垒",
             ""
         };
 
         list[F_BASTION] = FilterInfo{
             CAT_STRUCT, 0, 1, 1, 0, Bastion, 1, 1, MC_1_16, MC_NEWEST, -1, 0, disp++,
             ":icons/bastion.png",
-            "Bastion remnant",
+            "堡垒遗迹",
             ""
         };
 
         list[F_ENDCITY] = FilterInfo{
             CAT_STRUCT, 0, 1, 1, 0, End_City, 1, 1, MC_1_9, MC_NEWEST, +1, 0, disp++,
             ":icons/endcity.png",
-            "End city",
+            "末地城",
             ""
         };
 
         list[F_GATEWAY] = FilterInfo{
             CAT_STRUCT, 0, 1, 1, 0, End_Gateway, 1, 1, MC_1_13, MC_NEWEST, +1, 0, disp++,
             ":icons/gateway.png",
-            "End gateway",
-            "Scattered end gateway return portals, not including those "
-            "generated when defeating the dragon. "
+            "末地(返程)折跃门",
+            "这里特指返程折跃门，并非那些你打龙开的折跃门"
             ""
         };
     }
