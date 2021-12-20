@@ -35,7 +35,7 @@
       <item row="0" column="0">
        <widget class="QLabel" name="label">
         <property name="text">
-         <string>每条线程搜索的种子数量: </string>
+         <string>单线程单次搜索种子数量: </string>
         </property>
        </widget>
       </item>
@@ -88,12 +88,12 @@
         </property>
         <item>
          <property name="text">
-          <string>默认浅色</string>
+          <string>浅色(默认)</string>
          </property>
         </item>
         <item>
          <property name="text">
-          <string>深色主题</string>
+          <string>深色</string>
          </property>
         </item>
        </widget>
